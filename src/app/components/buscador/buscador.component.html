@@ -1,0 +1,17 @@
+<h1>Buscando: {{termino}} </h1>
+
+<div class="card-deck">
+    <div class="card" *ngFor="let auto of vehiculosArr; let i = index" style="max-width: 25%; padding: 10px;">
+        <img class="card-img-top" src="assets/images/{{auto.imagen}}" alt="Card image cap" style="max-height: 150px;">
+        <div class="card-body">
+            <h5 class="card-title">{{auto.marca}}</h5>
+            <h5 class="card-title">{{auto.modelo}}</h5>
+            <p class="card-text">$ {{auto.anio}}</p>
+            <p class="card-text">$ {{auto.precio}}</p>
+        </div>
+        <div class="card-footer" style="text-align: center;">
+            <button (click)="detalleVehiculo(auto.imagen)" class="btn btn-primary" style="width: 90%;">Detalle</button>
+        </div>
+    </div>
+</div>
+

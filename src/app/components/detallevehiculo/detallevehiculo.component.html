@@ -1,0 +1,18 @@
+<h1>{{auto.marca}} {{ auto.modelo}} </h1>
+<hr>
+<div class="row">
+    <div class="col-md-4" style="text-align: center">
+        <img src="assets/images/{{auto.imagen}}" style="max-width: 300px;" class="img-fluid" [alt]="auto.modelo">
+        <br><br>
+        <a [routerLink]="['/home']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>  
+    <div class="col-md-8">
+        <h4>Año {{ auto.anio}}</h4>
+        <h3>{{auto.precio}}</h3>
+        <h3 style="color: rgb(13, 197, 68)">{{auto.localidad}}</h3>
+        <p><b>Destacado:</b> {{auto.destacado}}</p>
+        
+    </div> 
+</div>
+
+

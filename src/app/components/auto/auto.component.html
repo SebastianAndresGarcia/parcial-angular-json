@@ -1,0 +1,22 @@
+<div class="grid-container">
+    <div class="grid-item" style="padding-left: 30%; padding-right: 30%; padding-top:1%; padding-bottom: 1%;" *ngFor="let auto of vehiculosArr; let i = index">
+        <div class="row">
+            <div class="col" align="center" justify="center">
+                <br>
+
+                <button (click)="detalleVehiculo(auto.imagen)" style="padding: 0; border: none; background: none ;">
+
+                    <img src="assets/images/{{auto.imagen}}" style="max-width: 160px;" />
+                </button>
+                <br /><br />
+            </div>
+            <div class="col" cols="6">
+                <br />
+                <h5 style="color:black">{{auto.marca}}</h5>
+                <h4 style="color:black">{{auto.modelo }} {{ auto.anio}}</h4>
+                <h4 style="color:black">${{ auto.precio}}</h4>
+
+            </div>
+        </div>
+    </div>
+</div>
